@@ -6,7 +6,58 @@ $(function () {
     var todayDate = dayjs().format('MM/DD/YYYY') 
     $("#currentDay").html(todayDate);
 
+    $(document).ready(function () {
     
+    $(".saveBtn").on("click", function () {
+       
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
+
+        // local save
+        localStorage.setItem(time, text);
+    })
+   
+    function timeTracker() {
+        //dayjs hours
+        var timeNow = dayjs().hour();
+
+        
+        $(".time-block").each(function () {
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+            if (blockTime < timeNow) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if (blockTime === timeNow) {
+                $(this).removeClass("past");
+                $(this).removeClass("future");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+                $(this).addClass("future");
+
+            }
+        })
+    }
+
+    // local items
+    $("#hour8 .description").val(localStorage.getItem("hour9"));
+    $("#hour9 .description").val(localStorage.getItem("hour10"));
+    $("#hour10 .description").val(localStorage.getItem("hour11"));
+    $("#hour11 .description").val(localStorage.getItem("hour12"));
+    $("#hour12 .description").val(localStorage.getItem("hour13"));
+    $("#hour13 .description").val(localStorage.getItem("hour14"));
+    $("#hour14 .description").val(localStorage.getItem("hour15"));
+    $("#hour15 .description").val(localStorage.getItem("hour16"));
+    $("#hour16 .description").val(localStorage.getItem("hour17"));
+    $("#hour17 .description").val(localStorage.getItem("hour17"));
+
+    timeTracker();
+})
     // TODO: Add a listener for click events on the save button. This code should
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
