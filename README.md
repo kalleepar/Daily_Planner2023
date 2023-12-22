@@ -16,8 +16,7 @@ No installation necessary!
     -Enter data into selected timeslot.
     -Refresh the page and mantain data.
 
-![Alt text](https://github.com/kalleepar/password-generator/blob/main/Develop/images/password-generator-sample.jpg)
-![Alt text](https://github.com/kalleepar/password-generator/blob/main/Develop/images/password-generator-sample2.jpg)
+![Alt text](./Assets/Daily_Planner2023sample.jpg)
 
 ## Link to website!
 https://kalleepar.github.io/password-generator/
