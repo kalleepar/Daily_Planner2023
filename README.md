@@ -19,7 +19,7 @@ No installation necessary!
 ![Alt text](./Assets/Daily_Planner2023sample.jpg)
 
 ## Link to website!
-https://kalleepar.github.io/password-generator/
+https://kalleepar.github.io/Daily_Planner2023/
 
 ## Credits
 
